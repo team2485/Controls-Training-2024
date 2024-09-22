@@ -36,7 +36,7 @@ import com.pathplanner.lib.util.HolonomicPathFollowerConfig;
 import com.pathplanner.lib.util.PIDConstants;
 import com.pathplanner.lib.util.ReplanningConfig;
 
-import frc.robot.commands.Interpolation.ShotParameter;
+
 import frc.util.COTSFalconSwerveConstants;
 import frc.util.SwerveModuleConstants;
 
@@ -364,31 +364,7 @@ public final class Constants {
     //       Map.entry(2.61 + 0.06, new ShotParameter(80, 0.062)),
     //       Map.entry(2.91 + 0.06, new ShotParameter(80, 0.065))
     //       ));
-    public static final TreeMap<Double, ShotParameter> kShootingMap = 
-      new TreeMap<>(
-        Map.ofEntries( 
-          Map.entry(1.223 + 0.097, new ShotParameter(70, 1.375-.05)),
-          Map.entry(1.907 + 0.097, new ShotParameter(70, 1.2-.05)),
-          Map.entry(2.923 + 0.097, new ShotParameter(70, 1.1-.07)),
-          Map.entry(4.494 + 0.097, new ShotParameter(70, .97-.07)),
-          Map.entry(5.484 + 0.097, new ShotParameter(70, .96-.05))
-          // Map.entry(4.5, new ShotParameter(80, .8))
-          // Last field tuning 1.401, 4.1, 4.5
-          ));
-      
-    public static final TreeMap<Double, ShotParameter> kNoteDetectionMap = 
-      new TreeMap<>(
-        Map.ofEntries(
-          Map.entry(-20.0, new ShotParameter(80, -16.7)),
-          Map.entry(-19.75, new ShotParameter(80, -15.2)),
-          Map.entry(-17.6, new ShotParameter(80, -12.7)),
-          Map.entry(-15.3, new ShotParameter(80, -11.69)),
-          Map.entry(-16.48, new ShotParameter(80, -12.45)),
-          Map.entry(-14.61, new ShotParameter(80, -10.32)),
-          Map.entry(-13.2, new ShotParameter(80, -8.59)),
-          Map.entry(-12.42, new ShotParameter(80, -6.52))
-          ));
-
+  
     public static final int kShooterLeftPort = 17;
     public static final int kShooterRightPort = 18;
 

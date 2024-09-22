@@ -15,6 +15,9 @@ import com.revrobotics.CANSparkLowLevel.MotorType;
 public class GeneralRoller extends SubsystemBase {
     /*
      * 
+     * You will want to write this class with the guidance of this document, or at least the latter portion....
+     * https://docs.google.com/document/d/16XcUJPxMh9GqO4A-GVb6mW3it_Yp4bLcdosbXM8OW3I/edit?usp=sharing
+     * 
      * The GeneralRoller class is representative of any roller that makes contact with a note. Specifically, all rollers on Vivaldi use SparkMaxes, 
      * so the framework in this class is designed around them. Your goal is to fill the missing methods. Some variables have been provided for you,
      * but others will need to be programmed in based on your approach--- remember, programming is problem-solving, and there's multiple ways to 
@@ -41,7 +44,7 @@ public class GeneralRoller extends SubsystemBase {
     StateReverse,
     StateForwardFast,
   }
-
+  
   public LinearFilter filter = LinearFilter.singlePoleIIR(0.5, 0.2);
 
   // You generally only need one motor for the rollers on Vivaldi
