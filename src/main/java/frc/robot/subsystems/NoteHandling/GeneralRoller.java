@@ -61,7 +61,10 @@ public class GeneralRoller extends SubsystemBase {
 
     // You have been given the CANSparkMax here, which is representative of the motor driving this shaft, 
     // you still need to confige it! Look at the docs and the provided arguments to this subsystem, and determine what those configs should be.
-    m_spark.setInverted(setInverted);
+    m_spark.setSmartCurrentLimit(kGeneralRollerCurrentLimit);
+    m_spark.setInverted(setInverted); 	
+    m_spark.enableVoltageCompensation(kNominalVoltage);
+    m_spark.setIdleMode(IdleMode.kCoast);
 
   }
 
