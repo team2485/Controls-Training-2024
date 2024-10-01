@@ -47,7 +47,7 @@ public class GeneralRoller extends SubsystemBase {
   
   public LinearFilter filter = LinearFilter.singlePoleIIR(0.5, 0.2);
 
-  private GeneralRollerStates currentState = GeneralRollerStates.StateOff;;
+  public GeneralRollerStates m_currentState = GeneralRollerStates.StateOff;
 
   // You generally only need one motor for the rollers on Vivaldi
   private final CANSparkMax m_spark;
@@ -69,35 +69,43 @@ public class GeneralRoller extends SubsystemBase {
   public void periodic() {
     //This function runs ~20 times per second. It is in every subsytem, and is effectively your "while" loop or "update" loop.
     //Thus, the usage of while(true) and similar loops is generally avoided--- they can cause memory-leaks and other jank! Instead, put looping code here. 
-    switch (currentState){
+    switch (m_currentState){
       case StateOff:
+        desiredVoltage = 0;
         break;
       case StateForward:
+        desiredVoltage = 3;
         break;
       case StateReverse:
+        desiredVoltage = -3;
         break;
       case StateForwardFast:
+        desiredVoltage = 12;
         break;
     }
+
+    runControlLoop();
   }
 
   public double getCurrent() {
     //hint: this method wants you to return the Amperage (Current, or A) to the motor. the LinearFilter is useful here.
 
-    return 1.0; //replace 1.0 with your return value
+    return filter.calculate(m_spark.getOutputCurrent()); //replace 1.0 with your return value
   }
 
-
+  public void runControlLoop() {
+    m_spark.setVoltage(desiredVoltage);
+  }
   
   
   public void requestState(GeneralRollerStates desiredState) {
     // hint: this method is called with a GeneralRollerState when the state is to be changed.
-    currentState = desiredState;
+    m_currentState = desiredState;
   }
  
   
   public GeneralRollerStates getCurrentState() { 
-    return currentState;
+    return m_currentState;
   }
 
   // misc/processing methods go here, getters and setters should follow above format
