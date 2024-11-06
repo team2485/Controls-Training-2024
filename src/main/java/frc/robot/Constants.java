@@ -36,7 +36,6 @@ import com.pathplanner.lib.util.HolonomicPathFollowerConfig;
 import com.pathplanner.lib.util.PIDConstants;
 import com.pathplanner.lib.util.ReplanningConfig;
 
-import frc.robot.commands.Interpolation.ShotParameter;
 import frc.util.COTSFalconSwerveConstants;
 import frc.util.SwerveModuleConstants;
 

@@ -72,7 +72,9 @@ public class Shooter extends SubsystemBase {
     }
 
       public void runControlLoop() {
-        // -i voltage babyyyyyyyyyyyyyyyyyyy
+        // SHOOTER SHENANIGANS GO HERE UNLESS YOU ARE TOO COOL FOR THAT
+
+        // ||||||||||||||||||||||||||||||||
       }
     
       // SO MANY METHODS TO MAKE (like 4), SO LITTLE TIME TO DO IT (literally 6 hours)
