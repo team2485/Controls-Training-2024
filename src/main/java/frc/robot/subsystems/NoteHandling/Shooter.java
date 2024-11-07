@@ -41,6 +41,7 @@ public class Shooter extends SubsystemBase {
     private double desiredVoltage = 0;
 
     // you might notice a new type right below here called a "DoubleSupplier," don't worry about it, you won't need to use distanceFromSpeaker for this
+    // incase you were wonder though, it is a lambda, cause of course it is
     public Shooter(DoubleSupplier distanceFromSpeaker) {
 
         // CREATE THE CONFIGURATIONS FOR THE TALONS HERE
