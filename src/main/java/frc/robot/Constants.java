@@ -36,7 +36,6 @@ import com.pathplanner.lib.util.HolonomicPathFollowerConfig;
 import com.pathplanner.lib.util.PIDConstants;
 import com.pathplanner.lib.util.ReplanningConfig;
 
-
 import frc.util.COTSFalconSwerveConstants;
 import frc.util.SwerveModuleConstants;
 
@@ -353,18 +352,6 @@ public final class Constants {
 
   public static final class ShooterConstants {
 
-    // public static final TreeMap<Double, ShotParameter> kShootingMap = 
-    //   new TreeMap<>(
-    //     Map.ofEntries(
-    //       Map.entry(1.11 + 0.06, new ShotParameter(80, 0)),
-    //       Map.entry(1.41 + 0.06, new ShotParameter(80, 0.02)),
-    //       Map.entry(1.71 + 0.06, new ShotParameter(80, 0.035)),
-    //       Map.entry(2.01 + 0.06, new ShotParameter(80, 0.047)),
-    //       Map.entry(2.31 + 0.06, new ShotParameter(80, 0.05)),
-    //       Map.entry(2.61 + 0.06, new ShotParameter(80, 0.062)),
-    //       Map.entry(2.91 + 0.06, new ShotParameter(80, 0.065))
-    //       ));
-  
     public static final int kShooterLeftPort = 17;
     public static final int kShooterRightPort = 18;
 
